@@ -66,7 +66,9 @@ const Navbar = ({ onNavigate = () => {} }: NavbarProps) => {
             </button>
           ))}
           <a
-            href="/register"
+            href="https://ebank.paynomadcapital.com/signup"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-white bg-[#0077be] hover:bg-[#0066a6] px-4 py-2 rounded transition-colors duration-200 font-medium"
           >
             REGISTER
@@ -104,7 +106,9 @@ const Navbar = ({ onNavigate = () => {} }: NavbarProps) => {
               </button>
             ))}
             <a
-              href="/register"
+              href="https://ebank.paynomadcapital.com/signup"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-white bg-[#0077be] hover:bg-[#0066a6] py-2 px-4 rounded text-center font-medium"
             >
               REGISTER

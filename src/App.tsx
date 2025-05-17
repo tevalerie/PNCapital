@@ -23,22 +23,7 @@ const RequireEmailForOtp = ({
 };
 
 function App() {
-  // Initialize verifyingEmail from sessionStorage
-  const [verifyingEmail, setVerifyingEmail] = useState<string | null>(() => {
-    return sessionStorage.getItem("verifyingEmail");
-  });
-
-  // Function to update verifyingEmail in state and sessionStorage
-  const handleSetVerifyingEmail = (email: string) => {
-    setVerifyingEmail(email);
-    sessionStorage.setItem("verifyingEmail", email);
-  };
-
-  // Function to clear verifyingEmail from state and sessionStorage
-  const clearVerifyingEmail = () => {
-    setVerifyingEmail(null);
-    sessionStorage.removeItem("verifyingEmail");
-  };
+  // OTP verification state management removed as it's no longer needed
 
   return (
     <>
@@ -47,21 +32,6 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route
-          path="/register"
-          element={<SignupPage setVerifyingEmail={handleSetVerifyingEmail} />}
-        />
-        <Route
-          path="/verify"
-          element={
-            <RequireEmailForOtp verifyingEmail={verifyingEmail}>
-              <OtpVerificationPage
-                email={verifyingEmail}
-                onVerificationSuccess={clearVerifyingEmail}
-              />
-            </RequireEmailForOtp>
-          }
-        />
         {/* Add more routes as needed */}
 
         {/* Add this before the catchall route */}
