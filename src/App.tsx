@@ -2,28 +2,19 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { useRoutes } from "react-router-dom";
 import routes from "tempo-routes";
 import Home from "./components/home";
-import SignupPage from "./pages/SignupPage";
-import OtpVerificationPage from "./pages/OtpVerificationPage";
-import { useState, useEffect, ReactNode } from "react";
-
-// RequireEmailForOtp component to guard the OTP verification route
-interface RequireEmailForOtpProps {
-  children: ReactNode;
-  verifyingEmail: string | null;
-}
-
-const RequireEmailForOtp = ({
-  children,
-  verifyingEmail,
-}: RequireEmailForOtpProps) => {
-  if (!verifyingEmail) {
-    return <Navigate to="/register" replace />;
-  }
-  return <>{children}</>;
-};
+import { useEffect } from "react";
 
 function App() {
-  // OTP verification state management removed as it's no longer needed
+  // Handle external redirects
+  useEffect(() => {
+    // Check if the URL contains specific paths for redirection
+    const path = window.location.pathname;
+    if (path === "/register" || path === "/signup") {
+      window.location.href = "https://ebank.paynomadcapital.com/signup";
+    } else if (path === "/signin" || path === "/login") {
+      window.location.href = "https://ebank.paynomadcapital.com/signin";
+    }
+  }, []);
 
   return (
     <>
@@ -32,10 +23,38 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* Add more routes as needed */}
+
+        {/* Redirect routes */}
+        <Route
+          path="/register"
+          element={
+            <Navigate to="https://ebank.paynomadcapital.com/signup" replace />
+          }
+        />
+        <Route
+          path="/signup"
+          element={
+            <Navigate to="https://ebank.paynomadcapital.com/signup" replace />
+          }
+        />
+        <Route
+          path="/signin"
+          element={
+            <Navigate to="https://ebank.paynomadcapital.com/signin" replace />
+          }
+        />
+        <Route
+          path="/login"
+          element={
+            <Navigate to="https://ebank.paynomadcapital.com/signin" replace />
+          }
+        />
 
         {/* Add this before the catchall route */}
         {import.meta.env.VITE_TEMPO && <Route path="/tempobook/*" />}
+
+        {/* Catchall route */}
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </>
   );

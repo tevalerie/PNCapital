@@ -17,3 +17,7 @@ dist-ssr
 # Tempo specific files
 **/tempobook/dynamic/
 **/tempobook/storyboards/
+
+# Environment variables
+.env
+.env.local

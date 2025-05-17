@@ -110,12 +110,24 @@ const Navbar = ({ onNavigate = () => {} }: NavbarProps) => {
               target="_blank"
               rel="noopener noreferrer"
               className="text-white bg-[#0077be] hover:bg-[#0066a6] py-2 px-4 rounded text-center font-medium"
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href =
+                  "https://ebank.paynomadcapital.com/signup";
+              }}
             >
               REGISTER
             </a>
             <a
               href="https://ebank.paynomadcapital.com/signin"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-[#0077be] hover:text-[#6B96C3] transition-colors duration-200 font-medium text-left py-2 border-b border-[#3a506b] last:border-0"
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href =
+                  "https://ebank.paynomadcapital.com/signin";
+              }}
             >
               SIGN IN
             </a>
