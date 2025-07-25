@@ -420,9 +420,10 @@ const Footer: React.FC = () => {
         <h3 className="font-bold text-lg">13. Contact Us</h3>
         <p>For questions about these Terms, contact:</p>
         <p>PayNomad Capital Ltd.</p>
-        <p>810 Quayside Dr. Unit #205</p>
-        <p>New Westminster, British Columbia</p>
-        <p>V3M 6B9, Canada</p>
+        <p>422 Richards Street, Unit 170 </p>
+        <p>The Network Hub </p>
+        <p>Vancouver, British Columbia</p>
+        <p>V6B 2Z4, Canada</p>
         <p>Email: info@paynomadcapitalltd.ca</p>
       </div>
     </div>
