@@ -240,9 +240,10 @@ const Footer: React.FC = () => {
         </p>
         <p>PayNomad Capital Ltd.</p>
         <p>Privacy Officer</p>
-        <p>810 Quayside Dr. Unit #205</p>
-        <p>New Westminster, British Columbia</p>
-        <p>V3M 6B9, Canada</p>
+        <p>422 Richards Street, Unit 170,</p>
+        <p>The Network Hub,</p>
+        <p>Vancouver, British Columbia,</p>
+        <p>V6B 2Z4, Canada</p>
         <p>Email: info@paynomadcapitalltd.ca</p>
       </div>
     </div>
@@ -505,9 +506,10 @@ const Footer: React.FC = () => {
         <h3 className="font-bold text-lg">8. Contact Us</h3>
         <p>For questions about cookies, contact:</p>
         <p>PayNomad Capital Ltd.</p>
-        <p>810 Quayside Dr. Unit #205</p>
-        <p>New Westminster, British Columbia</p>
-        <p>V3M 6B9, Canada</p>
+        <p>422 Richards Street, Unit 170 </p>
+        <p>The Network Hub </p>
+        <p>Vancouver, British Columbia</p>
+        <p>V6B 2Z4, Canada</p>
         <p>Email: info@paynomadcapitalltd.ca</p>
       </div>
     </div>
@@ -523,11 +525,11 @@ const Footer: React.FC = () => {
               PayNomad Capital Ltd.
             </h3>
             <p className="text-gray-300 mb-2">
-              810 Quayside Dr. Unit #205,
+              422 Richards Street, Unit 170, The Network Hub, 
               <br />
-              New Westminster, British Columbia,
+              Vancouver, British Columbia,
               <br />
-              V3M 6B9, Canada
+              V6B 2Z4, Canada
             </p>
             <p className="text-gray-300 mb-2">
               Email: info@paynomadcapitalltd.ca
